@@ -21,6 +21,8 @@ def autosize(fig=None, figsize=None):
     ## Make font sizes proportional to figure size
     fontsize_labels = figsize[0] * 5
     fontsize_ticks = fontsize_labels / 2
+    scatter_size = figsize[0] * 13
+    linewidth = figsize[0]
     axes = fig.get_axes()
     for ax in axes:
 
@@ -33,13 +35,11 @@ def autosize(fig=None, figsize=None):
             item.set_fontsize(fontsize_ticks)
 
         ## Set line widths
-        linewidth = figsize[0]
         plot_objs = [child for child in ax.get_children() if isinstance(child, Line2D)]
         for plot_obj in plot_objs:
             plot_obj.set_linewidth(linewidth)
 
         ## Set scatter point sizes
-        scatter_size = figsize[0] * 13
         plot_objs = [
             child
             for child in ax.get_children()
