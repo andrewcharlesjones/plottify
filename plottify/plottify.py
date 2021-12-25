@@ -50,34 +50,3 @@ def autosize(fig=None, figsize=None):
 
     ## Set tight layout
     plt.tight_layout()
-
-
-if __name__ == "__main__":
-
-    import numpy as np
-
-    n = 100
-    x = np.random.uniform(low=-5, high=5, size=n)
-    y = x + np.random.normal(scale=0.5, size=n)
-
-    # fig, ax = plt.subplots(figsize=(5, 5))
-    # ax.scatter(x, y)
-    # ax.set_xlabel("X")
-    # ax.set_ylabel("Y")
-    plt.scatter(x, y)
-    plt.xlabel("X")
-    plt.ylabel("Y")
-    autosize(figsize=(5, 5))
-    plt.show()
-
-    # x = np.linspace(-5, 5, n)
-    # y = x**2
-    # fig, ax = plt.subplots(figsize=(5, 5))
-    # ax.plot(x, y)
-    # ax.set_xlabel("X")
-    # ax.set_ylabel("Y")
-    # autosize(fig)
-    # plt.show()
-    import ipdb
-
-    ipdb.set_trace()
