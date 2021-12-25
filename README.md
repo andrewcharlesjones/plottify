@@ -12,7 +12,11 @@ By default, matplotlib sets the sizes of these objects to pre-specified values, 
 
 Plottify's `autosize` function adjusts these sizes automatically to make them more legible:
 
-![scatterplot55_autosized](examples/plots/scatterplot55_autosized.png)
+![scatterplot33_autosized](examples/plots/scatterplot33_autosized.png)
+
+![scatterplot1010_autosized](examples/plots/scatterplot1010_autosized.png)
+
+![scatterplot2020_autosized](examples/plots/scatterplot2020_autosized.png)
 
 ## Bugs and feature requests
 
