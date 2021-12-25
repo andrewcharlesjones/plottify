@@ -17,11 +17,12 @@ def autosize(fig=None, figsize=None):
 
         ## Set size of figure
         fig.set_size_inches(figsize)
+    print(figsize)
 
     ## Make font sizes proportional to figure size
     fontsize_labels = figsize[0] * 5
     fontsize_ticks = fontsize_labels / 2
-    scatter_size = figsize[0] * 13
+    scatter_size = (figsize[0] * 1.5) ** 2
     linewidth = figsize[0]
     axes = fig.get_axes()
     for ax in axes:
@@ -50,3 +51,29 @@ def autosize(fig=None, figsize=None):
 
     ## Set tight layout
     plt.tight_layout()
+
+if __name__ == "__main__":
+    import numpy as np
+    from plottify import autosize
+    import matplotlib.pyplot as plt
+
+    n = 100
+    x = np.random.uniform(low=-5, high=5, size=n)
+    y = x + np.random.normal(scale=0.5, size=n)
+
+    for size in [3, 10, 20]:
+
+        plt.figure(figsize=(size, size))
+        plt.scatter(x, y)
+        plt.xlabel("X")
+        plt.ylabel("Y")
+        plt.title("Default")
+        plt.show()
+
+        plt.figure(figsize=(size, size))
+        plt.scatter(x, y)
+        plt.xlabel("X")
+        plt.ylabel("Y")
+        plt.title("Autosized")
+        autosize()
+        plt.show()
