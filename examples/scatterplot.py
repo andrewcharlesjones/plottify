@@ -13,6 +13,7 @@ for size in [3, 10, 20]:
     plt.xlabel("X")
     plt.ylabel("Y")
     plt.title("Default")
+    plt.tight_layout()
     plt.savefig("./plots/scatterplot{}{}_default.png".format(size, size))
     plt.show()
 
