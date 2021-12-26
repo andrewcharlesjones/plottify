@@ -16,8 +16,9 @@ The plottify interface is extremely simple and relies on one central function, `
 from plottify import autosize
 import matplotlib.pyplot as plt
 
-plt.plot(x, y)
+plt.scatter(x, y)
 autosize()
+plt.show()
 ```
 
 By default, matplotlib sets the sizes of these objects to pre-specified values, regardless of the figure size. This can result in tiny fonts or sizes for larger figures:
