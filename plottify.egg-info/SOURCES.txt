@@ -1,0 +1,8 @@
+README.md
+setup.py
+plottify/__init__.py
+plottify/plottify.py
+plottify.egg-info/PKG-INFO
+plottify.egg-info/SOURCES.txt
+plottify.egg-info/dependency_links.txt
+plottify.egg-info/top_level.txt

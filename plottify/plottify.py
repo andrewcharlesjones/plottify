@@ -17,7 +17,6 @@ def autosize(fig=None, figsize=None):
 
         ## Set size of figure
         fig.set_size_inches(figsize)
-    print(figsize)
 
     ## Make font sizes proportional to figure size
     fontsize_labels = figsize[0] * 5
