@@ -21,6 +21,14 @@ autosize()
 plt.show()
 ```
 
+If you have a matplotlib figure object, you can pass it as an argument to `autosize`:
+
+```python
+autosize(fig)
+```
+
+## Demonstration
+
 By default, matplotlib sets the sizes of these objects to pre-specified values, regardless of the figure size. This can result in tiny fonts or sizes for larger figures:
 
 ![scatterplot2020_default](examples/plots/scatterplot2020_default.png)
