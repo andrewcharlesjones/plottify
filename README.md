@@ -43,7 +43,7 @@ When we change the figure size, plottify automatically adjusts the objects' size
 
 ![scatterplot1010_autosized](examples/plots/scatterplot1010_autosized.png)
 
-
+![scatterplot2020_autosized](examples/plots/scatterplot2020_autosized.png)
 
 ## Bugs and feature requests
 
