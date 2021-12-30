@@ -53,7 +53,6 @@ def autosize(fig=None, figsize=None):
 
 if __name__ == "__main__":
     import numpy as np
-    from plottify import autosize
     import matplotlib.pyplot as plt
 
     n = 100
