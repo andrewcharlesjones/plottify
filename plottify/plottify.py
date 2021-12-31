@@ -18,11 +18,28 @@ def autosize(fig=None, figsize=None):
         ## Set size of figure
         fig.set_size_inches(figsize)
 
-    ## Make font sizes proportional to figure size
+    ## Set sizes of objects
+    ##      -- Note that this function currently adjusts sizes only
+    ##         according to the horizontal width fo the figure.
+
+    ## Font sizes
     fontsize_labels = figsize[0] * 5
     fontsize_ticks = fontsize_labels / 2
+
+    ## Scatter point size
     scatter_size = (figsize[0] * 1.5) ** 2
+
+    ## Line width
     linewidth = figsize[0]
+
+    ## Spine width
+    spine_width = 0.16 * figsize[0]
+
+    ## Tick length and width
+    tick_length = spine_width*8
+    tick_width = spine_width
+
+    ## Change all of these sizes
     axes = fig.get_axes()
     for ax in axes:
 
@@ -47,6 +64,14 @@ def autosize(fig=None, figsize=None):
         ]
         for plot_obj in plot_objs:
             plot_obj.set_sizes([scatter_size])
+
+        # import ipdb; ipdb.set_trace()
+        ## Set spine widths
+        for spine in ax.spines.values():
+            spine.set_linewidth(spine_width)
+
+        ## Set tick width and length
+        ax.tick_params(width=tick_width, length=tick_length)
 
     ## Set tight layout
     plt.tight_layout()
