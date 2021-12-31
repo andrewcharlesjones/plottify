@@ -1,5 +1,7 @@
 # plottify
 
+[![PyPI](https://img.shields.io/pypi/v/plottify.svg?logo=pypi&logoColor=white&label=PyPI)](https://pypi.org/project/plottify/)
+
 The plottify package is makes matplotlib plots more legible. It's a thin wrapper around [matplotlib](https://matplotlib.org/) that automatically adjusts font sizes, scatter point sizes, line widths, etc. according to the figure size.
 
 ## Installation
