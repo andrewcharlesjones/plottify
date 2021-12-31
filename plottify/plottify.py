@@ -65,7 +65,6 @@ def autosize(fig=None, figsize=None):
         for plot_obj in plot_objs:
             plot_obj.set_sizes([scatter_size])
 
-        # import ipdb; ipdb.set_trace()
         ## Set spine widths
         for spine in ax.spines.values():
             spine.set_linewidth(spine_width)
